@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "truthlens-ai"
+version = "0.1.0"
+description = "An Evidence-Grounded Multimodal Deep Learning Framework for Detection, Grounding, and Explanation of Multimodal Misinformation"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Darsh Goswami", email = "darsh.goswami@truthlens.ai" },
+    { name = "Disha Sinha", email = "disha.sinha@truthlens.ai" },
+    { name = "Rishabh Raj", email = "rishabh.raj@truthlens.ai" },
+    { name = "Dhruv Kumar", email = "dhruv.kumar@truthlens.ai" },
+]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "transformers>=4.35.0",
+    "sentence-transformers>=2.2.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+    "pydantic>=2.0.0",
+    "pillow>=9.5.0",
+    "scikit-learn>=1.2.0",
+    "matplotlib>=3.7.0",
+    "pyyaml>=6.0",
+    "python-multipart>=0.0.6",
+    "httpx>=0.24.0",
+    "requests>=2.28.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["truthlens*", "config*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+

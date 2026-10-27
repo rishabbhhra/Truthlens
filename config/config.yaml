@@ -1,0 +1,55 @@
+project:
+  name: "TRUTHLENS-AI"
+  version: "1.0.0"
+  description: "An Evidence-Grounded Multimodal Deep Learning Framework for Detection, Grounding, and Explanation of Multimodal Misinformation"
+
+model:
+  text_encoder: "roberta-base"
+  vision_encoder: "google/vit-base-patch16-224"
+  embed_dim: 768
+  cross_attention_heads: 8
+  dropout: 0.1
+  num_classes: 4
+  class_labels:
+    0: "True / Mostly True"
+    1: "Misleading"
+    2: "False / Mostly False"
+    3: "Unverifiable"
+  loss_weights:
+    alpha_cls: 1.0
+    beta_cons: 0.6
+    gamma_evid: 0.4
+  focal_loss:
+    gamma: 2.0
+    alpha: null
+
+retrieval:
+  dense_model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  top_k: 5
+  similarity_threshold: 0.50
+  faiss_index_type: "IndexFlatIP"
+  device: "cpu"
+
+verification:
+  nli_model_name: "cross-encoder/nli-distilroberta-base"
+  stance_thresholds:
+    contradiction: 0.55
+    entailment: 0.60
+
+explainability:
+  gradcam_target_layer: "vit.encoder.layer.-1"
+  token_attribution_method: "attention_rollout"
+  colormap: "turbo"
+
+data:
+  image_size: 224
+  max_text_tokens: 128
+  leakage_audit:
+    hash_algorithm: "dhash"
+    hash_size: 8
+    similarity_distance_threshold: 4
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
