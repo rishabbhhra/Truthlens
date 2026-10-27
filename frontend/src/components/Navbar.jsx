@@ -1,76 +1,80 @@
 import React from 'react';
-import { ShieldCheck, Activity, BarChart2, Database, Users } from 'lucide-react';
+import { ShieldCheck, BarChart2, Database, Users, Wifi, WifiOff } from 'lucide-react';
 
-export default function Navbar({ backendStatus, onOpenBenchmark, onOpenAudit }) {
+export default function Navbar({ apiStatus, onBenchmark, onAudit }) {
   return (
-    <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <nav className="glass sticky top-0 z-50 border-b border-slate-800/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+
         {/* Brand */}
-        <div className="flex items-center space-x-3">
-          <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-rose-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-            <ShieldCheck className="h-6 w-6 text-white" />
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-indigo-600/30">
+            <ShieldCheck className="w-4.5 h-4.5 text-white" size={18} />
           </div>
-          <div>
-            <div className="flex items-center space-x-2">
-              <span className="font-extrabold text-xl tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
+          <div className="min-w-0">
+            <div className="flex items-center gap-2">
+              <span className="font-black text-base tracking-tight text-white">
                 TRUTHLENS<span className="text-indigo-400">-AI</span>
               </span>
-              <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+              <span className="hidden sm:inline-flex px-1.5 py-0.5 text-[10px] font-semibold bg-indigo-500/15 text-indigo-300 border border-indigo-500/25 rounded-full">
                 Milestone 1
               </span>
             </div>
-            <p className="text-[11px] text-slate-400 hidden sm:block">
-              Evidence-Grounded Multimodal Deep Learning Framework
+            <p className="hidden md:block text-[11px] text-slate-500 leading-none mt-0.5">
+              Evidence-Grounded Multimodal Misinformation Detection
             </p>
           </div>
         </div>
 
-        {/* Action Controls & Team Credit */}
-        <div className="flex items-center space-x-3">
-          {/* Team Tooltip */}
+        {/* Right controls */}
+        <div className="flex items-center gap-2 flex-shrink-0">
+
+          {/* Team */}
           <div className="relative group">
-            <button className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700/80 border border-slate-700 text-xs font-medium text-slate-300 transition">
-              <Users className="h-3.5 w-3.5 text-slate-400" />
-              <span>Project Team</span>
+            <button className="flex items-center gap-1.5 h-8 px-3 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-transparent hover:border-slate-700 transition">
+              <Users size={13} />
+              <span className="hidden sm:inline">Team</span>
             </button>
-            <div className="absolute right-0 mt-2 w-64 p-3 rounded-xl bg-slate-900 border border-slate-700 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-150 z-50 text-xs">
-              <p className="font-semibold text-slate-200 border-b border-slate-800 pb-1.5 mb-2">
-                Project Ownership (IMD)
-              </p>
+            <div className="absolute right-0 top-10 w-60 glass-bright rounded-xl shadow-2xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50 text-xs">
+              <p className="text-slate-300 font-semibold pb-2 mb-2 border-b border-slate-800">IMD Project Team</p>
               <ul className="space-y-1.5 text-slate-400">
-                <li><span className="text-slate-200 font-medium">Darsh Goswami:</span> Research & Multimodal Architecture</li>
-                <li><span className="text-slate-200 font-medium">Disha Sinha:</span> Computer Vision & Visual Forensics</li>
-                <li><span className="text-indigo-300 font-medium">Rishabh Raj:</span> NLP, Retrieval & Backend Engineering</li>
-                <li><span className="text-slate-200 font-medium">Dhruv Kumar:</span> Evidence Verification</li>
+                {[
+                  ['Darsh Goswami', 'Architecture & Research'],
+                  ['Disha Sinha', 'Computer Vision'],
+                  ['Rishabh Raj', 'NLP & Backend'],
+                  ['Dhruv Kumar', 'Evidence Verification'],
+                ].map(([name, role]) => (
+                  <li key={name}><span className="text-slate-200 font-medium">{name}</span><br/><span className="text-[11px]">{role}</span></li>
+                ))}
               </ul>
             </div>
           </div>
 
-          {/* Benchmark comparison button */}
           <button
-            onClick={onOpenBenchmark}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700/80 border border-slate-700 text-xs font-medium text-slate-300 transition"
+            onClick={onBenchmark}
+            className="flex items-center gap-1.5 h-8 px-3 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-transparent hover:border-slate-700 transition"
           >
-            <BarChart2 className="h-3.5 w-3.5 text-indigo-400" />
-            <span className="hidden sm:inline">Benchmark Baselines</span>
+            <BarChart2 size={13} className="text-indigo-400" />
+            <span className="hidden sm:inline">Benchmarks</span>
           </button>
 
-          {/* Leakage Audit button */}
           <button
-            onClick={onOpenAudit}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700/80 border border-slate-700 text-xs font-medium text-slate-300 transition"
+            onClick={onAudit}
+            className="flex items-center gap-1.5 h-8 px-3 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-transparent hover:border-slate-700 transition"
           >
-            <Database className="h-3.5 w-3.5 text-emerald-400" />
-            <span className="hidden sm:inline">Data Leakage Audit</span>
+            <Database size={13} className="text-emerald-400" />
+            <span className="hidden sm:inline">Data Audit</span>
           </button>
 
-          {/* Live Status indicator */}
-          <div className="flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-[11px] text-slate-400">
-            <span className={`h-2 w-2 rounded-full ${backendStatus === 'online' ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'}`} />
-            <span className="font-mono">{backendStatus === 'online' ? 'API Online' : 'Connecting'}</span>
+          {/* Status */}
+          <div className="flex items-center gap-1.5 h-8 px-2.5 rounded-lg bg-slate-900 border border-slate-800 text-[11px]">
+            {apiStatus === 'online'
+              ? <><Wifi size={11} className="text-emerald-400" /><span className="text-emerald-400 font-mono">Online</span></>
+              : <><WifiOff size={11} className="text-slate-500" /><span className="text-slate-500 font-mono">Offline</span></>
+            }
           </div>
         </div>
       </div>
-    </header>
+    </nav>
   );
 }
