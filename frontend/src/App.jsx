@@ -135,8 +135,8 @@ export default function App() {
 
       {/* Footer */}
       <footer className="border-t border-slate-900 py-5 text-center text-xs text-slate-600 no-print">
-        <p className="font-semibold">TRUTHLENS-AI · Intelligent Model Design using AI (IMD) — Milestone 1</p>
-        <p className="mt-0.5">Darsh Goswami · Disha Sinha · Rishabh Raj · Dhruv Kumar</p>
+        <p className="font-semibold">TRUTHLENS-AI · Intelligent Model Design using AI (IMD)</p>
+        <p className="mt-0.5">Rishabh Raj · Darsh Goswami · Disha Sinha · Dhruv Kumar</p>
       </footer>
 
       <BenchmarkModal open={showBench} onClose={() => setShowBench(false)} />

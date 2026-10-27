@@ -16,9 +16,6 @@ export default function Navbar({ apiStatus, onBenchmark, onAudit }) {
               <span className="font-black text-base tracking-tight text-white">
                 TRUTHLENS<span className="text-indigo-400">-AI</span>
               </span>
-              <span className="hidden sm:inline-flex px-1.5 py-0.5 text-[10px] font-semibold bg-indigo-500/15 text-indigo-300 border border-indigo-500/25 rounded-full">
-                Milestone 1
-              </span>
             </div>
             <p className="hidden md:block text-[11px] text-slate-500 leading-none mt-0.5">
               Evidence-Grounded Multimodal Misinformation Detection
@@ -39,9 +36,9 @@ export default function Navbar({ apiStatus, onBenchmark, onAudit }) {
               <p className="text-slate-300 font-semibold pb-2 mb-2 border-b border-slate-800">IMD Project Team</p>
               <ul className="space-y-1.5 text-slate-400">
                 {[
+                  ['Rishabh Raj', 'NLP & Backend'],
                   ['Darsh Goswami', 'Architecture & Research'],
                   ['Disha Sinha', 'Computer Vision'],
-                  ['Rishabh Raj', 'NLP & Backend'],
                   ['Dhruv Kumar', 'Evidence Verification'],
                 ].map(([name, role]) => (
                   <li key={name}><span className="text-slate-200 font-medium">{name}</span><br/><span className="text-[11px]">{role}</span></li>

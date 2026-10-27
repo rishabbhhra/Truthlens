@@ -9,9 +9,9 @@ description = "An Evidence-Grounded Multimodal Deep Learning Framework for Detec
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
+    { name = "Rishabh Raj", email = "rishabh.raj@truthlens.ai" },
     { name = "Darsh Goswami", email = "darsh.goswami@truthlens.ai" },
     { name = "Disha Sinha", email = "disha.sinha@truthlens.ai" },
-    { name = "Rishabh Raj", email = "rishabh.raj@truthlens.ai" },
     { name = "Dhruv Kumar", email = "dhruv.kumar@truthlens.ai" },
 ]
 dependencies = [

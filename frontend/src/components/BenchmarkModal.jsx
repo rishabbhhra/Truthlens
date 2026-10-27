@@ -25,7 +25,7 @@ export default function BenchmarkModal({ open, onClose }) {
               <Trophy size={18} className="text-indigo-400" />
             </div>
             <div>
-              <h2 className="text-base font-bold text-white">Benchmark Comparison (Milestone 1)</h2>
+              <h2 className="text-base font-bold text-white">Benchmark Comparison</h2>
               <p className="text-[11px] text-slate-500">Fakeddit (1M posts) · MultiFC</p>
             </div>
           </div>

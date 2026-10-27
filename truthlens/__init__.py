@@ -4,4 +4,4 @@ for Detection, Grounding, and Explanation of Multimodal Misinformation.
 """
 
 __version__ = "1.0.0"
-__author__ = "Darsh Goswami, Disha Sinha, Rishabh Raj, Dhruv Kumar"
+__author__ = "Rishabh Raj, Darsh Goswami, Disha Sinha, Dhruv Kumar"

@@ -1,7 +1,7 @@
 # TRUTHLENS-AI
 
 > **An Evidence-Grounded Multimodal Deep Learning Framework for Detection, Grounding, and Explanation of Multimodal Misinformation**  
-> *Intelligent Model Design using AI (IMD) — Milestone 1 Project*
+> *Intelligent Model Design using AI (IMD)*
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.14-ee4c2c.svg)](https://pytorch.org/)
@@ -36,9 +36,9 @@ Modern online misinformation has evolved beyond text rumors into complex, multim
 
 | Member Name | Role / Ownership | University Reg. Number |
 | :--- | :--- | :--- |
+| **Rishabh Raj** | NLP, Retrieval & Backend Engineering Lead | S24CSEU2489 |
 | **Darsh Goswami** | Research & Multimodal Architecture Lead | S24CSEU0843 |
 | **Disha Sinha** | Computer Vision & Visual Forensics Lead | S24CSEU0859 |
-| **Rishabh Raj** | NLP, Retrieval & Backend Engineering Lead | S24CSEU2489 |
 | **Dhruv Kumar** | Evidence Verification Lead | S24CSEU0811 |
 
 ---
@@ -141,7 +141,7 @@ make audit
 
 ---
 
-## 📊 Benchmark Comparisons (Milestone 1 Findings)
+## 📊 Benchmark Comparisons (Empirical Findings)
 
 Evaluation across **Fakeddit Benchmark (1M multimodal Reddit posts)** and **MultiFC**:
 
@@ -172,8 +172,8 @@ $$\mathcal{L}_{\text{total}} = \alpha \mathcal{L}_{\text{cls}} + \beta \mathcal{
 ```bibtex
 @inproceedings{truthlens2026,
   title={TRUTHLENS-AI: An Evidence-Grounded Multimodal Deep Learning Framework for Detection, Grounding, and Explanation of Multimodal Misinformation},
-  author={Goswami, Darsh and Sinha, Disha and Raj, Rishabh and Kumar, Dhruv},
-  booktitle={Intelligent Model Design using AI Milestone Report},
+  author={Raj, Rishabh and Goswami, Darsh and Sinha, Disha and Kumar, Dhruv},
+  booktitle={Intelligent Model Design using AI Technical Report},
   year={2026}
 }
 ```

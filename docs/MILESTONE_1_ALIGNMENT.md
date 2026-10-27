@@ -1,6 +1,6 @@
-# Milestone 1 Alignment & Deliverables Matrix
+# Project Alignment & Deliverables Matrix
 
-This document maps all specifications, objectives, and milestones from the **TRUTHLENS-AI Milestone 1 Report** to their concrete implementations in this codebase.
+This document maps all specifications, objectives, and deliverables from the **TRUTHLENS-AI Technical Report** to their concrete implementations in this codebase.
 
 ---
 
@@ -8,9 +8,9 @@ This document maps all specifications, objectives, and milestones from the **TRU
 
 | Member Name | Role / Area of Ownership | Implemented Modules in Codebase |
 | :--- | :--- | :--- |
+| **Rishabh Raj** | NLP, Retrieval & Backend Engineering Lead | `truthlens/retrieval/claim_extractor.py`<br>`truthlens/retrieval/dense_retriever.py`<br>`truthlens/api/*`<br>`truthlens/pipeline/orchestrator.py` |
 | **Darsh Goswami** | Research & Multimodal Architecture Lead | `truthlens/models/encoders.py`<br>`truthlens/models/cross_attention.py`<br>`truthlens/models/multi_task.py`<br>`truthlens/models/full_model.py` |
 | **Disha Sinha** | Computer Vision & Visual Forensics Lead | `truthlens/explainability/gradcam.py`<br>`truthlens/explainability/visualizer.py`<br>`frontend/src/components/VisualForensicsGradCAM.jsx` |
-| **Rishabh Raj** | NLP, Retrieval & Backend Engineering Lead | `truthlens/retrieval/claim_extractor.py`<br>`truthlens/retrieval/dense_retriever.py`<br>`truthlens/api/*`<br>`truthlens/pipeline/orchestrator.py` |
 | **Dhruv Kumar** | Evidence Verification Lead | `truthlens/retrieval/corpus.py`<br>`truthlens/verification/nli_cross_encoder.py`<br>`truthlens/verification/stance_scorer.py`<br>`truthlens/data/leakage_audit.py` |
 
 ---
@@ -37,9 +37,9 @@ This document maps all specifications, objectives, and milestones from the **TRU
 
 ---
 
-## 3. Milestone Phases Alignment
+## 3. Project Phases Alignment
 
-| Milestone Phase | Technical Deliverables | Code Status |
+| Project Phase | Technical Deliverables | Code Status |
 | :--- | :--- | :--- |
 | **Phase 1: Research & Lit. Review** | 15–20 paper matrix, research gaps, formulation | Documented in `docs/ARCHITECTURE.md` |
 | **Phase 2: Data Pipeline & Audit** | Preprocessing, tokenization, leakage audit | Implemented in `truthlens/data/` |
