@@ -1,7 +1,6 @@
 # TRUTHLENS-AI
 
 > **An Evidence-Grounded Multimodal Deep Learning Framework for Detection, Grounding, and Explanation of Multimodal Misinformation**  
-> *Intelligent Model Design using AI (IMD)*
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.14-ee4c2c.svg)](https://pytorch.org/)
